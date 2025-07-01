@@ -2,6 +2,11 @@ import { Box, Button, Flex, HStack, SimpleGrid, Text } from "@chakra-ui/react";
 import { GoNorthStar } from "react-icons/go";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import { MotionBox, MotionText } from "../Chakra-page/Motion";
+import { MdOutlineLayers } from "react-icons/md";
+import { FiTool } from "react-icons/fi";
+import { LuShieldHalf } from "react-icons/lu";
+import { SiHackthebox } from "react-icons/si";
+import { TfiStatsUp } from "react-icons/tfi";
 
 const statsData = [
   {
@@ -11,31 +16,31 @@ const statsData = [
     P: "Details on production processes and assembly capacity, and product types.",
   },
   {
-    Icon1: <GoNorthStar />,
+    Icon1: <MdOutlineLayers />,
     Icon2: <RiArrowRightUpLine />,
-    h1: "Quality Assurance",
-    P: "Information on quality control measures, certifications, and standards.",
+    h1: "Custom Manufacturing ",
+    P: "Custom Product creation with design and customization options.",
   },
   {
-    Icon1: <GoNorthStar />,
+    Icon1: <FiTool />,
     Icon2: <RiArrowRightUpLine />,
     h1: "Supply Chain Management",
     P: "Details on supply chain logistics, inventory management, and procurement.",
   },
   {
-    Icon1: <GoNorthStar />,
+    Icon1: <LuShieldHalf />,
     Icon2: <RiArrowRightUpLine />,
     h1: "Customer Support",
     P: "Information on customer service channels, response times, and support policies.",
   },
   {
-    Icon1: <GoNorthStar />,
+    Icon1: <SiHackthebox />,
     Icon2: <RiArrowRightUpLine />,
     h1: "Sustainability Practices",
     P: "Details on sustainability initiatives, eco-friendly practices, and waste management.",
   },
   {
-    Icon1: <GoNorthStar />,
+    Icon1: <TfiStatsUp />,
     Icon2: <RiArrowRightUpLine />,
     h1: "Innovation and R&D",
     P: "Information on research and development efforts, innovation strategies, and new product development.",

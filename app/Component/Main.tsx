@@ -23,7 +23,7 @@ export default function Main() {
       justifyContent="center"
       bg="#f4f4f9"
       position={"relative"}
-      mt={{ base: "5%", md: "5%", lg: "60px" }}
+      pt={{ base: "20%", md: "10%", lg: "60px" }}
       pb={{ base: 10, md: 10, lg: 20 }}
     >
       <Flex w={"100%"} flexDirection="column" gap={3} alignItems="center">
@@ -184,11 +184,11 @@ export default function Main() {
         <SimpleGrid
           columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
           position={{ base: "static", md: "static", lg: "absolute" }}
-          bottom={59}
           gap={5}
           justifyContent="center"
           alignItems={{ base: "flex-start", md: "flex-start", lg: "flex-end" }}
           w="100%"
+          mt={{ base: 5, md: 5, lg: "39vh" }}
           flexWrap="wrap"
           display={{ base: "flex", md: "flex", lg: "flex" }}
         >
