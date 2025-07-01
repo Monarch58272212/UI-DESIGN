@@ -53,7 +53,7 @@ export default function Navigation() {
     >
       {/* Logo */}
       <Link href="/">
-        <Image src="/always.png" width={60} height={60} alt="logo" />
+        <Image src="/logoBlack.png" width={60} height={60} alt="logo" />
       </Link>
 
       <Flex
@@ -70,6 +70,15 @@ export default function Navigation() {
                 duration: 0.5,
                 delay: index * 0.2,
                 ease: "easeInOut",
+              }}
+              whileHover={{
+                y: -5,
+                color: "green",
+                scale: 1.05,
+                transition: {
+                  duration: 0.2,
+                  ease: "easeInOut",
+                },
               }}
               size="sm"
               variant="ghost"
@@ -122,6 +131,15 @@ export default function Navigation() {
                           duration: 0.5,
                           delay: index * 0.2,
                           ease: "easeInOut",
+                        }}
+                        whileHover={{
+                          y: -5,
+                          color: "green",
+                          scale: 1.05,
+                          transition: {
+                            duration: 0.2,
+                            ease: "easeInOut",
+                          },
                         }}
                         size="sm"
                         variant="ghost"

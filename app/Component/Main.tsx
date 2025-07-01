@@ -1,7 +1,8 @@
 "use client";
 import { Box, Button, Flex, HStack, SimpleGrid, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-
+const MotionHStack = motion(HStack);
+const BoxMotion = motion(Box);
 const TextMotion = motion(Text);
 const ButtonMotion = motion(Button);
 import { CiStar } from "react-icons/ci";
@@ -9,32 +10,41 @@ import { LuBoxes } from "react-icons/lu";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { BsSpeedometer } from "react-icons/bs";
+import { GiStarSwirl } from "react-icons/gi";
+import { FaRegFileAlt } from "react-icons/fa";
+import { IoStatsChartOutline } from "react-icons/io5";
+import { BsWater } from "react-icons/bs";
+import { BsArrowDownLeftCircle } from "react-icons/bs";
 export default function Main() {
   return (
     <Flex
       w="100%"
-      h="100vh"
+      h={{ base: "100%", md: "100%", lg: "100vh" }}
       justifyContent="center"
       bg="#f4f4f9"
       position={"relative"}
+      mt={{ base: "5%", md: "5%", lg: "60px" }}
+      pb={{ base: 10, md: 10, lg: 20 }}
     >
       <Flex w={"100%"} flexDirection="column" gap={3} alignItems="center">
         <TextMotion
+          viewport={{ once: false, amount: 0.3 }}
           initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
           as="h1"
           w="60%"
           fontSize={{ base: "2xl", md: "3xl", lg: "xxx-large" }}
           fontWeight="bold"
           textAlign="center"
-          pt={10}
+          pt={{ base: 3, md: 3, lg: 10 }}
         >
           The Future of Manufacturing with Latest Technology
         </TextMotion>
         <TextMotion
+          viewport={{ once: false, amount: 0.3 }}
           initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1, ease: "easeInOut" }}
           as="p"
           fontSize="sm"
@@ -44,55 +54,149 @@ export default function Main() {
           Expert tech to elevate your Manufacturing. Lets take your business
           further
         </TextMotion>
-        <HStack>
+        <HStack zIndex={1}>
           <ButtonMotion
+            viewport={{ once: false, amount: 0.3 }}
             initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1, ease: "easeInOut" }}
             borderRadius="full"
             bg="green.600"
             variant="solid"
-            size={{ base: "xs", md: "sm", lg: "md" }}
+            color={"white"}
+            size={{ base: "sm", md: "md", lg: "md" }}
           >
             Get Started
           </ButtonMotion>
           <ButtonMotion
+            viewport={{ once: false, amount: 0.3 }}
             initial={{ opacity: 0, x: 10 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1, ease: "easeInOut" }}
             variant="outline"
             borderRadius="full"
-            size={{ base: "xs", md: "sm", lg: "md" }}
+            size={{ base: "sm", md: "md", lg: "md" }}
           >
             Try Demo
           </ButtonMotion>
         </HStack>
         <Flex direction="column" alignItems="center">
-          <HStack gap={0.5}>
+          <MotionHStack
+            viewport={{ once: false, amount: 0.3 }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeInOut" }}
+            gap={0.5}
+            pt={{ base: 2, md: 3, lg: 4 }}
+            pb={2}
+          >
             <CiStar size="20" />
             <CiStar size="20" />
             <CiStar size="20" />
             <CiStar size="20" />
             <CiStar size="20" />
             <Text as="b">5.0</Text>
-          </HStack>
-          <Text fontSize="sm" color="gray.500">
+          </MotionHStack>
+          <TextMotion
+            viewport={{ once: false, amount: 0.3 }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
+            fontSize="sm"
+            color="gray.500"
+          >
             Rated by 1000+ users
-          </Text>
+          </TextMotion>
         </Flex>
+
+        <TextMotion
+          viewport={{ once: false, amount: 0.3 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.1, ease: "easeInOut" }}
+          display={{ base: "none", md: "none", lg: "block" }}
+          position={"absolute"}
+          right={"15%"}
+          top="20%"
+        >
+          <GiStarSwirl size="24" />
+        </TextMotion>
+        <TextMotion
+          viewport={{ once: false, amount: 0.3 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
+          display={{ base: "none", md: "none", lg: "block" }}
+          position={"absolute"}
+          left={"10%"}
+          top="20%"
+        >
+          <BsArrowDownLeftCircle size="24" />
+        </TextMotion>
+        <TextMotion
+          viewport={{ once: false, amount: 0.3 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
+          display={{ base: "none", md: "none", lg: "block" }}
+          fontSize="lg"
+          bg={"#d3edd9"}
+          position={"absolute"}
+          left={"15%"}
+          top="25%"
+          padding={2}
+          borderRadius="full"
+        >
+          <FaRegFileAlt />
+        </TextMotion>
+        <TextMotion
+          viewport={{ once: false, amount: 0.3 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.4, ease: "easeInOut" }}
+          display={{ base: "none", md: "none", lg: "block" }}
+          fontSize="lg"
+          bg={"#d3edd9"}
+          position={"absolute"}
+          right={"10%"}
+          bottom="65%"
+          padding={2}
+          borderRadius="full"
+        >
+          <IoStatsChartOutline />
+        </TextMotion>
+        <TextMotion
+          viewport={{ once: false, amount: 0.3 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+          display={{ base: "none", md: "none", lg: "block" }}
+          fontSize="lg"
+          border="1px"
+          borderRadius={"full"}
+          padding={2}
+          position={"absolute"}
+          left={"10%"}
+          bottom="65%"
+        >
+          <BsWater />
+        </TextMotion>
         <SimpleGrid
-          columns={{ base: 1, sm: 2, md: 3 }}
-          position={{ lg: "absolute" }}
+          columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+          position={{ base: "static", md: "static", lg: "absolute" }}
           bottom={59}
           gap={5}
           justifyContent="center"
           alignItems={{ base: "flex-start", md: "flex-start", lg: "flex-end" }}
           w="100%"
-          mb={7}
           flexWrap="wrap"
           display={{ base: "flex", md: "flex", lg: "flex" }}
         >
-          <Box
+          <BoxMotion
+            viewport={{ once: false, amount: 0.3 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
             boxShadow={"lg"}
             bg={"lightskyblue"}
             h={300}
@@ -102,8 +206,12 @@ export default function Main() {
             backgroundSize="cover" // para sakto sa box ang image
             backgroundPosition="center" // center ang image
             backgroundRepeat="no-repeat" // hindi mag-uulit
-          ></Box>
-          <Box
+          ></BoxMotion>
+          <BoxMotion
+            viewport={{ once: false, amount: 0.3 }}
+            initial={{ opacity: 0, x: -10 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeInOut" }}
             h={200}
             bg={"#122c13"}
             mt={0}
@@ -122,8 +230,18 @@ export default function Main() {
             <Text as="h1" px={4} color={"white"}>
               Our Steemed Clients and Partners
             </Text>
-          </Box>
-          <Box h={180} boxShadow={"base"} borderRadius="lg" w={250} p={3}>
+          </BoxMotion>
+          <BoxMotion
+            viewport={{ once: false, amount: 0.3 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.1, ease: "easeInOut" }}
+            h={180}
+            boxShadow={"base"}
+            borderRadius="lg"
+            w={250}
+            p={3}
+          >
             <HStack w={"100%"} justifyContent="space-between" p={2}>
               <Button bg="#c4fbc7">
                 <LuBoxes />
@@ -152,8 +270,12 @@ export default function Main() {
               </Text>{" "}
               this Month
             </Text>
-          </Box>
-          <Box
+          </BoxMotion>
+          <BoxMotion
+            viewport={{ once: false, amount: 0.3 }}
+            initial={{ opacity: 0, x: 10 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeInOut" }}
             h={200}
             bg={"#dff7b3"}
             bottom={0}
@@ -172,8 +294,12 @@ export default function Main() {
             <Text px={5} fontSize={"sm"}>
               Years of Dedicated Service
             </Text>
-          </Box>
-          <Box
+          </BoxMotion>
+          <BoxMotion
+            viewport={{ once: false, amount: 0.3 }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
             h={300}
             bg="url('https://images.unsplash.com/photo-1637516408720-c7d7fd09a16e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D')"
             boxShadow={"lg"}
@@ -195,7 +321,7 @@ export default function Main() {
               <BsSpeedometer />
             </Text>
             <Text>Achieve Optimal Efficeiency and Boost Productivity</Text>
-          </Box>
+          </BoxMotion>
         </SimpleGrid>
       </Flex>
     </Flex>
