@@ -24,7 +24,6 @@ export default function Main() {
       bg="#f4f4f9"
       position={"relative"}
       pt={{ base: "20%", md: "10%", lg: "60px" }}
-      pb={{ base: 10, md: 10, lg: 20 }}
     >
       <Flex w={"100%"} flexDirection="column" gap={3} alignItems="center">
         <TextMotion
@@ -33,7 +32,7 @@ export default function Main() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
           as="h1"
-          w="60%"
+          w={{ base: "90%", md: "90%", lg: "60%" }}
           fontSize={{ base: "2xl", md: "3xl", lg: "xxx-large" }}
           fontWeight="bold"
           textAlign="center"

@@ -51,19 +51,16 @@ export default function StatsSection() {
   return (
     <Flex
       w={"100%"}
-      h={{ base: "100%", md: "100%", lg: "105vh" }}
       alignItems={"center"}
       justifyContent={"flex-start"}
       flexDirection={"column"}
       bg={"linear-gradient(to right, #f0f4f8, #d9e2ec)"}
       justifyItems={"center"}
       textAlign={"center"}
-      pb={{ base: 1, md: 2, lg: 4 }}
     >
-      <Box w={"40%"} gap={4}>
+      <Box w={{ base: "90%", md: "90%", lg: "40%" }} gap={4}>
         <MotionText
           viewport={{ once: false, amount: 0.3 }}
-          pt={{ base: 5, md: 10, lg: 20 }}
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
@@ -89,7 +86,7 @@ export default function StatsSection() {
         justifyItems={"center"}
         columns={{ base: 1, md: 2, lg: 3 }}
         pt={10}
-        w={"100%"}
+        w={"90%"}
         justifyContent={"center"}
         width={"80%"}
       >
@@ -104,7 +101,7 @@ export default function StatsSection() {
               ease: "easeInOut",
             }}
             key={index}
-            w={300}
+            w={{ base: "100%", md: "90%", lg: "300" }}
             bg={"#1b5e2a"}
             p={4}
             borderRadius="md"
