@@ -50,6 +50,7 @@ const statsData = [
 export default function StatsSection() {
   return (
     <Flex
+      py={{ base: "5", md: "10", lg: "20" }}
       w={"100%"}
       alignItems={"center"}
       justifyContent={"flex-start"}

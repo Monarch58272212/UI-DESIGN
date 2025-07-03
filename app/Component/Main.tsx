@@ -22,6 +22,7 @@ export default function Main() {
       h={{ base: "100%", md: "100%", lg: "100vh" }}
       justifyContent="center"
       bg="#f4f4f9"
+      pb={{ base: "5", md: "10", lg: "20" }}
       position={"relative"}
       pt={{ base: "20%", md: "10%", lg: "60px" }}
     >

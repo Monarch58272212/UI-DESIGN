@@ -92,9 +92,10 @@ export default function Navigation() {
       {/* Right-side Actions */}
       <Flex gap={3} align="center">
         <Button
-          variant="outline"
           size={{ base: "xs", md: "sm", lg: "sm" }}
           borderRadius="full"
+          bg={"black"}
+          color={"white"}
         >
           Login
         </Button>
