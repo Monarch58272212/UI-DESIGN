@@ -3,6 +3,7 @@
 import { Box, Flex, HStack, Text, Stack } from "@chakra-ui/react";
 import { FaCheckCircle } from "react-icons/fa";
 import { MotionBox, MotionText } from "../Chakra-page/Motion";
+import Image from "next/image";
 
 const Benefit = [
   {
@@ -28,6 +29,7 @@ const Benefit = [
 export default function Benefits() {
   return (
     <Flex
+      m={"auto"}
       w="100%"
       justify="center"
       align="center"
@@ -45,38 +47,38 @@ export default function Benefits() {
       >
         <MotionBox
           viewport={{ once: false, amount: 0.3 }}
-          initial={{ opacity: 0, y: -10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.5,
-            delay: 0.3,
-            ease: "easeInOut",
-          }}
-          flex={1}
-          bg="gray.100"
-          p={6}
-          borderRadius="xl"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
+          w={{ base: "90%", md: "40%", lg: "40%" }}
+          h="auto"
+          borderRadius={"2xl"}
         >
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
-          </Text>
+          <Image
+            src="https://images.unsplash.com/photo-1707336862166-1e483cfa5c92?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D"
+            alt="Banner"
+            width={600}
+            height={500}
+            style={{ borderRadius: "1rem", objectFit: "contain" }}
+          />
         </MotionBox>
 
-        <Box w={{ base: "90%", md: "60%", lg: "50%" }}>
+        <Flex
+          justify={"center"}
+          align={"center"}
+          flexDirection={"column"}
+          w={{ base: "full", md: "60%", lg: "50%" }}
+        >
           <MotionText
             viewport={{ once: false, amount: 0.3 }}
             initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
             fontSize={{ base: "2xl", md: "3xl" }}
             mb={2}
-            textAlign={{ base: "center", md: "left" }}
+            textAlign={{ base: "center", md: "left", lg: "left" }}
             fontWeight="bold"
+            w={"100%"}
           >
             Key Benefits of our System for your Business Efficiency
           </MotionText>
@@ -84,9 +86,9 @@ export default function Benefits() {
             mb={6}
             viewport={{ once: false, amount: 0.3 }}
             initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeInOut" }}
-            textAlign={{ base: "center", md: "left" }}
+            textAlign={{ base: "center", md: "left", lg: "left" }}
             color={"gray.600"}
           >
             Our systems boost productivity, cut costs, and accelerate business
@@ -99,7 +101,7 @@ export default function Benefits() {
                 key={index}
                 viewport={{ once: false, amount: 0.3 }}
                 initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{
                   duration: 0.7,
                   delay: 0.3 * index,
@@ -114,13 +116,15 @@ export default function Benefits() {
                     <Text as="b" fontSize="lg">
                       {item.check}
                     </Text>
-                    <Text color="gray.600">{item.description}</Text>
+                    <Text color="gray.600" fontSize={"sm"}>
+                      {item.description}
+                    </Text>
                   </Box>
                 </HStack>
               </MotionBox>
             ))}
           </Stack>
-        </Box>
+        </Flex>
       </Flex>
     </Flex>
   );

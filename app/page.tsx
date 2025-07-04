@@ -4,6 +4,7 @@ import Benifits from "./Component/Benifits";
 import Plan from "./Component/Plan";
 import WorkWithUs from "./Component/WorkWithUs";
 import Idea from "./Component/Idea";
+import Footer from "./Component/Footer";
 export default function Home() {
   return (
     <>
@@ -13,6 +14,7 @@ export default function Home() {
       <Plan />
       <WorkWithUs />
       <Idea />
+      <Footer />
     </>
   );
 }
