@@ -41,7 +41,7 @@ export default function Benefits() {
         align="center"
         w="100%"
         maxW="1200px"
-        gap={8}
+        gap={{ base: 5, md: 15, lg: 20 }}
       >
         <MotionBox
           viewport={{ once: false, amount: 0.3 }}

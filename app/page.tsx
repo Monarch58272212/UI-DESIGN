@@ -2,6 +2,8 @@ import Main from "./Component/Main";
 import About from "./Component/About";
 import Benifits from "./Component/Benifits";
 import Plan from "./Component/Plan";
+import WorkWithUs from "./Component/WorkWithUs";
+import Idea from "./Component/Idea";
 export default function Home() {
   return (
     <>
@@ -9,6 +11,8 @@ export default function Home() {
       <About />
       <Benifits />
       <Plan />
+      <WorkWithUs />
+      <Idea />
     </>
   );
 }

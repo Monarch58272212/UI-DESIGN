@@ -49,7 +49,7 @@ export default function Navigation() {
       justifyContent="space-between"
       alignItems="center"
       zIndex={1000}
-      backdropFilter="blur(10px)"
+      bg={"whiteAlpha.800"}
     >
       {/* Logo */}
       <Link href="/">
