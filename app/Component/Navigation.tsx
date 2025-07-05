@@ -24,10 +24,10 @@ import { IoIosMenu } from "react-icons/io";
 const ButtonMotion = motion(Button);
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/About" },
-  { label: "Contact", href: "/Contact" },
-  { label: "Features", href: "/Features" },
-  { label: "Services", href: "/ServiceComponent" },
+  { label: "About", href: "#" },
+  { label: "Contact", href: "#" },
+  { label: "Features", href: "#" },
+  { label: "Services", href: "#" },
 ];
 
 export default function Navigation() {
