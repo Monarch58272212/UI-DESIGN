@@ -50,10 +50,11 @@ export default function Navigation() {
       alignItems="center"
       zIndex={1000}
       bg={"whiteAlpha.800"}
+      py={{ base: 2, md: 3 }}
     >
       {/* Logo */}
       <Link href="/">
-        <Image src="/logoBlack.png" width={60} height={60} alt="logo" />
+        <Image src="/logo.png" width={80} height={80} alt="logo" />
       </Link>
 
       <Flex
