@@ -36,8 +36,9 @@ export default function Footer() {
               delay: 0.2,
               ease: "easeInOut",
             }}
+            py={3}
           >
-            <Image src="/always.png" width={80} height={80} alt="logo" />
+            <Image src="/logo.png" width={80} height={80} alt="logo" />
           </MotionBox>
           <MotionText
             viewport={{ once: false, amount: 0.3 }}
